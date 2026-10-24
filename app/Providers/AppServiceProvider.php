@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
         if (config('app.env') === 'production') {
             URL::forceScheme('https');
         }
-        Gate:define('viewApiDocs', function($user = null){
+        Gate::define('viewApiDocs', function ($user = null) {
             return true;
         });
     }
